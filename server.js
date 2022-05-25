@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://Abdulhalim:jaithunbi123@cluster0.4wjzh.mongodb.n
 app.use('/images', express.static(path.join(__dirname, "public/images")))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-app.use(morgan())
+// app.use(morgan())
 app.use('/auth', require('./routes/auth'))
 app.use('/users', require('./routes/users'))
 app.use('/post', require('./routes/post'))
