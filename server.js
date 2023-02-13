@@ -20,6 +20,13 @@ mongoose.connect('mongodb+srv://Abdulhalim:jaithunbi123@cluster0.4wjzh.mongodb.n
     console.log('Database connection successful.')
 })
 
+app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', "http://localhost:3000");
+    res.header('Access-Control-Allow-Headers', true);
+    res.header('Access-Control-Allow-Credentials', true);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    next();
+});
 app.use('/images', express.static(path.join(__dirname, "public/images")))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
