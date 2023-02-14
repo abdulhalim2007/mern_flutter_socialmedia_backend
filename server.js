@@ -24,11 +24,11 @@ mongoose.connect('mongodb+srv://Abdulhalim:jaithunbi123@cluster0.4wjzh.mongodb.n
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
+    res.header('access-control_allow_origin', "*");
     res.header('Access-Control-Allow-Headers', true);
     res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    next();
-});
+    next();}
 app.use('/images', express.static(path.join(__dirname, "public/images")))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
