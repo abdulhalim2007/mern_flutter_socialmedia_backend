@@ -28,7 +28,7 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Headers', true);
     res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-    next();}
+    next();})
 app.use('/images', express.static(path.join(__dirname, "public/images")))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
